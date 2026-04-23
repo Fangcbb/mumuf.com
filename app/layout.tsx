@@ -1,19 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
-
-const sans = Inter({
-  variable: '--font-sans',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const display = Cormorant_Garamond({
-  variable: '--font-display',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'MUMUF — Minimal Showcase',
@@ -26,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+    <html lang="en">
       <body className="bg-background font-sans text-foreground antialiased">{children}</body>
     </html>
   );
